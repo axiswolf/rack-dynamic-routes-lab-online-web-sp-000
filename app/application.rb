@@ -4,7 +4,7 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
-        Item.each do |item|
+        @@item.each do |item|
           resp.write "#{Item.price}"
           resp.status = 200
         end
