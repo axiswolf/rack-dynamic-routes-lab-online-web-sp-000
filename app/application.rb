@@ -4,9 +4,9 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
-      @@items.each do |item|
-        resp.write "#{item}\n"
-      end
+      # @@items.each do |item|
+      #   resp.write "#{item}\n"
+      # end
       item = req.params["item"]
         if @@items.include?(item)
           resp.write "#{item.price}"
