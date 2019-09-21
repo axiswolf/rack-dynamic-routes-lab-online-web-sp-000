@@ -11,9 +11,9 @@ class Application
         if @@items.include?(item)
           resp.write "#{item[1]}"
           resp.status = 200
-        else
-          resp.write "Item not found"
-          resp.status = 400
+          else
+            resp.write "Item not found"
+            resp.status = 400
         end
       else
         resp.write "Route not found"
