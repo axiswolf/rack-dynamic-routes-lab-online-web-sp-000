@@ -13,7 +13,7 @@ class Application
       #     resp.write "#{item[1]}"
             item_match = req.path.split("/items/").last
             item = @@items.find{|i| i.name == item_match}
-          if item_match.include?(item)
+          if item_match == item
             resp.write "#{item.price}"
             resp.status = 200
           else
