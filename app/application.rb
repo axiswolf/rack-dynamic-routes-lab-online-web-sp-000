@@ -12,9 +12,9 @@ class Application
       #   if @@items.include?(item)
       #     resp.write "#{item[1]}"
         if item_match = req.path.split("/items/").last
-          item = @@items.find{|i| i.name == item_match}
-          resp.write "#{item}"
-          resp.status = 200
+            item = @@items.find{|i| i.name == item_match}
+            resp.write "#{item}"
+            resp.status = 200
           else
             resp.write "Item not found"
             resp.status = 400
