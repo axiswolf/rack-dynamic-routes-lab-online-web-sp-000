@@ -19,10 +19,10 @@ class Application
   end
 end
 
-def handle_search(search_term)
-  if Item.include?(search_term)
-    adfad
-  else
-    ealf
-  end
-end
+# def handle_search(search_term)
+#   if Item.include?(search_term)
+#     adfad
+#   else
+#     ealf
+#   end
+# end
