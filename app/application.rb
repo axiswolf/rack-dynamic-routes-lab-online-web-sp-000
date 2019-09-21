@@ -5,7 +5,7 @@ class Application
 
     if req.path.match(/items/)
       item = req.params["item"]
-        if @@items.include?(item)
+        if Item.include?(item)
           resp.write "#{item.price}"
           resp.status = 200
         else
